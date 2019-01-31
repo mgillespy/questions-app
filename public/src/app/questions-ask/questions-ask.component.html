@@ -1,0 +1,19 @@
+<div class="wrapper">
+  <h5>Ask a Question!</h5>
+  <form (submit)='createQuestion()' class="postForm">
+    <div *ngIf="message" class="errors">
+      <div *ngIf="message.query" class="alert alert-danger top">{{message.query.message}}</div>
+      <div *ngIf="message.description" class="alert alert-danger">{{message.description.message}}</div>
+    </div>
+    <div class="form-group">
+      <label>Question:</label>
+      <input type="text" name='query' [(ngModel)]="question.query" class="form-control" />
+      <br>
+      <label>Description (optional):</label>
+      <input type="text" name='description' [(ngModel)]="question.description" class="form-control" />
+      <br>
+      <button type="submit" class='btn btn-info'>Ask Question</button>
+      <a routerLink="/questions" class='btn btn-secondary' style="color: white">Cancel</a>
+    </div>
+  </form>
+</div>

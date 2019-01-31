@@ -1,0 +1,23 @@
+h2{
+    margin: 10px 0 10px 20px;
+}
+ul{
+    list-style: none;
+}
+a{
+    font-size: 20px;
+    color: white;
+    margin: 0 10px 0 10px;
+}
+.navbar{
+    height: 50px;
+}
+.navtext{
+    font-size: 20px;
+    color: white;
+    margin: auto;
+    text-align: left;
+}
+img{
+    height: 35px;
+}

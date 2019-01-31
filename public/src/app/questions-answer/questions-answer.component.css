@@ -1,0 +1,25 @@
+.wrapper{
+    margin: 20px;
+}
+.btn{
+    margin: 5px;
+
+}
+form{
+    width: 50%;
+}
+label{
+    margin-right: 20px;
+}
+.spaced{
+    margin-top: 10px;
+}
+ul{
+    list-style: none;
+}
+a{
+    color: white;
+}
+.white{
+    color:white;
+}

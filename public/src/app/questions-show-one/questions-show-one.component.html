@@ -1,0 +1,26 @@
+<div class="wrapper">
+  <div *ngIf="question">
+    <h4>{{ question.query }} </h4>
+    <h5> {{ question.description }} </h5>
+    <h5>Answers:</h5>
+    <table class="table table-bordered table-striped">
+      <th class="theader">Name</th>
+      <th class="theader">Answer</th>
+      <th class="theader">Details</th>
+      <th class="theader">Rating</th>
+      <th class="theader">Vote</th>
+      <th class="theader">Actions</th>
+      <tr *ngFor="let x of question.answers">
+        <td> {{ x['answerer'] }} </td>
+        <td> {{ x['content'] }} </td>
+        <td> {{ x['details'] }} </td>
+        <td class="strong"> {{ x['likes'] }}</td>
+        <td><button class="btn btn-link" (click)="addLike([question._id],[x['_id']])"><img class="img" src="../../assets/images/thumbsup.png"></button><button
+            class="btn btn-link" (click)="downvote([question._id],[x['_id']])"><img class="img" src="../../assets/images/thumbsdown.png"></button></td>
+        <td> <button class="btn btn-dark" (click)="deleteAnswer([question._id],[x['_id']])">Delete Answer</button> </td>
+      </tr>
+    </table>
+    <a [routerLink]="['answer']" class='btn btn-info' style="color:white">Add Answer</a><a routerLink="/questions"
+      class='btn gray' style="color:black">Cancel</a>
+  </div>
+</div>

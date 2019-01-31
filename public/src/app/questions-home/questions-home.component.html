@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <div *ngIf="questions">
+    <table class="table table-bordered table-striped">
+      <th class="theader">Questions</th>
+      <th class="theader">Answers</th>
+      <th class="theader">Actions Available</th>
+      <tr *ngFor="let question of questions">
+        <td> {{ question.query }} </td>
+        <td> {{ question.answers.length }} </td>
+        <td>
+          <button class="btn btn-info" [routerLink]="[question._id]">Show Answers</button>
+          <button class="btn btn-secondary" [routerLink]="[question._id,'answer']">Answer Question</button>
+          <button class="btn btn-dark" (click)="deleteQuestion([question._id])">Delete Question</button>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+.wrapper{
+    margin: 20px;
+}
+button{
+    margin: 5px;
+}
+.btn{
+    margin: 5px;
+}
+table{
+    width: 60%;
+}
+ul{
+    list-style: none;
+}
+a{
+    color: white;
+}

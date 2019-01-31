@@ -1,0 +1,50 @@
+.wrapper{
+    margin: 20px;
+}
+.table{
+    width: 50%
+}
+.votes{
+    background-image: none;
+    border: 0px;
+}
+ul{
+    list-style: none;
+}
+a{
+    color: white;
+}
+.btn{
+    margin: 5px;
+}
+.btn-link{
+    padding: 0;
+    margin: 0;
+}
+form{
+    width: 50%;
+}
+label{
+    margin-right: 20px;
+}
+.spaced{
+    margin-top: 10px;
+}
+.gray{
+    background-color: lightgray;
+    color: black;
+}
+img{
+    height: 25px;
+    padding: 0px;
+
+}
+.strong{
+    font-size: 18px;
+    font-weight: bold;
+}
+td, th{
+    vertical-align: middle;
+    text-align: center;
+}
+

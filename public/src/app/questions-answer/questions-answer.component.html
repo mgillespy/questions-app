@@ -1,0 +1,27 @@
+<div class="wrapper">
+  <div *ngIf="question" class="h2">
+    {{question.query}}
+    <h4>{{question.description}}</h4>
+  </div>
+  <div class="wrapper">
+    <h5>Answer Question</h5>
+    <form (submit)='addAnswer(question._id)' class="postForm">
+      <div *ngIf="message" class="errors">
+        <div *ngIf="message.answerer" class="alert alert-danger top">{{message.answerer.message}}</div>
+        <div *ngIf="message.content" class="alert alert-danger top">{{message.content.message}}</div>
+        <div *ngIf="message.details" class="alert alert-danger">{{message.details.message}}</div>
+      </div>
+      <div class="form-group">
+        <label>Your Name:</label>
+        <input type="text" name='answerer' [(ngModel)]="answer.answerer" class="form-control" />
+        <br>
+        <label>Answer:</label>
+        <input type="text" name='content' [(ngModel)]="answer.content" class="form-control" />
+        <br>
+        <label>Details (optional):</label>
+        <input type="text" name='details' [(ngModel)]="answer.details" class="form-control" />
+        <br>
+        <button type="submit" class='btn btn-info'>Answer Question</button> <a routerLink="/questions" class='btn btn-secondary white'>Cancel</a>
+      </div>
+    </form>
+  </div>
